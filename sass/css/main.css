@@ -33,7 +33,7 @@ body {
 .logo {
   position: absolute;
   top: 65px;
-  left: 166px;
+  left: 8.65vw;
 }
 
 .info {
@@ -52,7 +52,7 @@ body {
   -webkit-box-align: left;
       -ms-flex-align: left;
           align-items: left;
-  padding: 166px;
+  padding: 8.65vw;
 }
 
 h1 {
@@ -75,5 +75,135 @@ p {
   margin-top: 30px;
   margin-bottom: 47px;
   color: #ce9797;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+form input {
+  color: black;
+  outline: none;
+  border-radius: 27px;
+  border: 1px solid lightgray;
+  width: 400px;
+  padding: 15px;
+}
+
+form ::-webkit-input-placeholder {
+  color: #413a3a;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+form :-ms-input-placeholder {
+  color: #413a3a;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+form ::-ms-input-placeholder {
+  color: #413a3a;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+form ::placeholder {
+  color: #413a3a;
+  font-family: 'Josefin Sans', sans-serif;
+  opacity: 0.5;
+  font-size: 16px;
+}
+
+form button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 10px 30px;
+  border-radius: 27px;
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
+  -webkit-animation: animation 1.2s infinite;
+          animation: animation 1.2s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  cursor: pointer;
+}
+
+.form-control.success input {
+  border-color: #2ecc71;
+}
+
+.form-control.error input {
+  border-color: #e74c3c;
+}
+
+.form-control i {
+  visibility: hidden;
+  position: absolute;
+  top: 15px;
+  right: 80px;
+  font-size: 1.2rem;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  visibility: hidden;
+}
+
+.form-control {
+  position: relative;
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+@-webkit-keyframes animation {
+  0% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+  100% {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+}
+
+@keyframes animation {
+  0% {
+    -webkit-transform: translateX(-70px);
+            transform: translateX(-70px);
+  }
+  100% {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
 }
 /*# sourceMappingURL=main.css.map */
