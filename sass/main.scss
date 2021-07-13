@@ -29,6 +29,11 @@ body {
 
 }
 
+.img-mobile {
+    display: none;
+}
+
+
 .logo {
     position: absolute;
     top: 65px;
@@ -60,7 +65,7 @@ h1 {
     }
 }
 
-p{
+p {
     width: 80%;
     line-height: 2;
     margin-top: 30px;
@@ -68,20 +73,20 @@ p{
     color: $desaturated-red;
 }
 
-form{
+form {
     display: flex;
 
-    input{
+    input {
         color: black;
         outline: none;
         border-radius: 27px;
         border: 1px solid lightgray;
         width: 400px;
         padding: 15px;
-        
+
     }
 
-    ::placeholder{
+    ::placeholder {
         color: $dark-grayish-red;
         font-family: 'Josefin Sans', sans-serif;
         opacity: 0.5;
@@ -89,12 +94,12 @@ form{
     }
 
 
-    button{
+    button {
         display: flex;
         justify-content: center;
         align-items: center;
         border: none;
-        background: linear-gradient(135deg,  hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
         padding: 10px 30px;
         border-radius: 27px;
         transform: translateX(-70px);
@@ -105,52 +110,116 @@ form{
 }
 
 .form-control.success input {
-	border-color: #2ecc71;
+    border-color: #2ecc71;
 }
 
 .form-control.error input {
-	border-color: #e74c3c;
+    border-color: #e74c3c;
 }
 
 .form-control i {
-	visibility: hidden;
-	position: absolute;
-	top: 15px;
-	right: 80px;
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    right: 80px;
     font-size: 1.2rem;
 }
 
 .form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
+    color: #2ecc71;
+    visibility: visible;
 }
 
 .form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
+    color: #e74c3c;
+    visibility: visible;
 }
 
 .form-control small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: -25px;
-	left: 15px;
-	visibility: hidden;
+    color: #e74c3c;
+    position: absolute;
+    bottom: -25px;
+    left: 15px;
+    visibility: hidden;
 }
 
 .form-control {
-	position: relative;
+    position: relative;
 }
 
 .form-control.error small {
-	visibility: visible;
+    visibility: visible;
 }
 
-@keyframes animation{
-    0%{
+@keyframes animation {
+    0% {
         transform: translateX(-70px);
     }
-    100%{
+
+    100% {
         transform: translateX(-60px);
     }
+}
+
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+@include mobile {
+    body{
+        overflow: scroll;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .logo {
+        top: 5%;
+        img{
+            height: 20px;
+        }
+        
+    }
+
+    .info {
+        width: 100%;
+        height: 65vh;
+        align-items: center;
+    }
+
+    .img-mobile {
+        display: block;
+        margin-top: 100px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .img {
+        display: none;
+    }
+
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    p{
+        width: 100%;
+        text-align: center;
+    }
+
+    form{
+        margin-left: 18%;
+      
+        input{
+            width: 320px;
+        }
+    }
+
 }
